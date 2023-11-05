@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/FirstScreen.dart';
+import 'package:flutter_application_2/FourScreen.dart';
 import 'package:flutter_application_2/ThreeScreen.dart';
 import 'package:flutter_application_2/secondScreen.dart';
 
@@ -14,10 +15,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
         debugShowCheckedModeBanner: false,
-        // home: FirstScreen(),
-       // home: ThreeScreen()
-
-        home: SecondScreen() //task
+        //home: FirstScreen(),// type of Buttom
+        home: ThreeScreen() // Button calculator
+        //home: FourSceen(),
+        //home: SecondScreen() //task
         );
   }
 }

@@ -52,6 +52,7 @@ class _ThreeScreenState extends State<ThreeScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 FloatingActionButton(
+                    mini: true,
                     backgroundColor: Colors.deepOrange,
                     child: const Icon(Icons.remove),
                     onPressed: () {
@@ -63,13 +64,14 @@ class _ThreeScreenState extends State<ThreeScreen> {
                   width: 20,
                 ),
                 FloatingActionButton(
+                    mini: true,
                     backgroundColor: Colors.deepOrange,
                     child: const Icon(Icons.add),
                     onPressed: () {
                       setState(() {
                         counter++;
                       });
-                    }),
+                    }), 
               ],
             )
           ],
