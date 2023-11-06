@@ -5,7 +5,27 @@ class FourSceen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return SafeArea(
+      child: Scaffold(
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                height: 200,
+                color: Colors.amber,
+              ),
+              Container(
+                height: 200,
+                color: Colors.black,
+              ),
+              Container(
+                height: 600,
+                color: Colors.blue,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
- 

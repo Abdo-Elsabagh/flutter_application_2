@@ -11,70 +11,86 @@ class _ThreeScreenState extends State<ThreeScreen> {
   int counter = 0;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.black,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text(
-              '0',
-              style: TextStyle(color: Colors.white, fontSize: 30),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                FloatingActionButton(
-                  mini: true,
-                  backgroundColor: Colors.deepOrange,
-                  onPressed: () {},
-                  child: const Icon(Icons.remove),
-                ),
-                const SizedBox(
-                  width: 20,
-                ),
-                FloatingActionButton(
-                  mini: true,
-                  backgroundColor: Colors.deepOrange,
-                  onPressed: () {},
-                  child: const Icon(Icons.add),
-                )
-              ],
-            ),
-            const SizedBox(
-              height: 40,
-            ),
-            Text(
-              '$counter',
-              style: const TextStyle(fontSize: 30, color: Colors.white),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                FloatingActionButton(
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.black,
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text(
+                '0',
+                style: TextStyle(color: Colors.white, fontSize: 30),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  FloatingActionButton(
                     mini: true,
                     backgroundColor: Colors.deepOrange,
+                    onPressed: () {},
                     child: const Icon(Icons.remove),
-                    onPressed: () {
-                      setState(() {
-                        counter--;
-                      });
-                    }),
-                const SizedBox(
-                  width: 20,
-                ),
-                FloatingActionButton(
+                  ),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  FloatingActionButton(
                     mini: true,
                     backgroundColor: Colors.deepOrange,
+                    onPressed: () {},
                     child: const Icon(Icons.add),
-                    onPressed: () {
-                      setState(() {
-                        counter++;
-                      });
-                    }), 
-              ],
-            )
-          ],
+                  )
+                ],
+              ),
+              const SizedBox(
+                height: 40,
+              ),
+              Text(
+                '$counter',
+                style: const TextStyle(fontSize: 30, color: Colors.white),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  FloatingActionButton(
+                      mini: true,
+                      backgroundColor: Colors.deepOrange,
+                      child: const Icon(Icons.remove),
+                      onPressed: () {
+                        setState(() {
+                          counter--;
+                        });
+                      }),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  FloatingActionButton(
+                      mini: true,
+                      backgroundColor: Colors.deepOrange,
+                      child: const Icon(Icons.add),
+                      onPressed: () {
+                        setState(() {
+                          counter++;
+                        });
+                      }),
+                ],
+              ),
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 8.0),
+                  child: Container(
+                    color: Colors.blue,
+                  ),
+                ),
+              ),
+              Expanded(
+                flex: 2,
+                child: Container(
+                  color: Colors.teal,
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
